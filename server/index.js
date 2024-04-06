@@ -20,6 +20,9 @@ app.use(express.json())
 
 mongoose.connect("mongodb://127.0.0.1:27017/user") 
 
+app.get("/", (req, res) =>{
+    res.json("Jeyicitta Maaraah");
+});   
 
 app.post("/register", (req, res) =>{
     const {username,phone,password} = req.body;
