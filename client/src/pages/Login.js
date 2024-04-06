@@ -20,6 +20,7 @@ function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState(null); // Store MongoDB ObjectId
 
+  axios.defaults.withCredentials = true;
   useEffect(() => {
     // Check if the user was logged in previously
     const loggedInUserId = localStorage.getItem('userId');
