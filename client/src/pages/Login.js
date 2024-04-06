@@ -65,7 +65,7 @@ function Login() {
     setFormErrors(errors);
     
     if (Object.keys(errors).length === 0) {
-      axios.post('https://donation-app-backend-git-master-james-projects-ce389d6e.vercel.app/?vercelToolbarCode=A9B5WbIH0WrJOaw/login', formValues)
+      axios.post('https://donation-app-frontend.vercel.app/login', formValues)
         .then(result => {
           console.log(result);
           if (result.data._id) {
@@ -90,7 +90,7 @@ function Login() {
     setFormErrors(errors);
     
     if (Object.keys(errors).length === 0) {
-      axios.post('https://donation-app-backend-git-master-james-projects-ce389d6e.vercel.app/?vercelToolbarCode=A9B5WbIH0WrJOaw/register', formValues)
+      axios.post('https://donation-app-frontend.vercel.app/register', formValues)
         .then(result => {
           if (result.data) {
             alert("Registration Success");
