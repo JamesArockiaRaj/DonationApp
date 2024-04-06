@@ -64,7 +64,7 @@ function Login() {
     setFormErrors(errors);
     
     if (Object.keys(errors).length === 0) {
-      axios.post('http://localhost:3001/login', formValues)
+      axios.post('https://donation-app-backend.vercel.app/login', formValues)
         .then(result => {
           console.log(result);
           if (result.data._id) {
@@ -89,7 +89,7 @@ function Login() {
     setFormErrors(errors);
     
     if (Object.keys(errors).length === 0) {
-      axios.post('http://localhost:3001/register', formValues)
+      axios.post('https://donation-app-backend.vercel.app/register', formValues)
         .then(result => {
           if (result.data) {
             alert("Registration Success");
