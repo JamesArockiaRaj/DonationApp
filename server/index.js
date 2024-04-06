@@ -6,23 +6,11 @@ const bycrypt = require('bcrypt')
 
 const app = express()
 app.use(express.json())
-app.use(cors(
-    {
-        origin: ["https://donation-app-frontend.vercel.app/"],
-        methods: ["POST","GET"],
-        credentials:true
-    }
-));
-
-app.use(express.json())
-
+app.use(cors());
 // mongoose.connect("mongodb://localhost:27017/user");
 
 mongoose.connect("mongodb://127.0.0.1:27017/user") 
 
-app.get("/", (req, res) =>{
-    res.json("Jeyicitta Maaraah");
-});   
 
 app.post("/register", (req, res) =>{
     const {username,phone,password} = req.body;
